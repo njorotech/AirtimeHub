@@ -6,10 +6,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/success/<name>/')
-def success(name):
-    return f'welcome {name}'
-
 @app.route('/login', methods = ['POST', 'GET'])
 def login():
     if request.method == 'POST':
