@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtime Recharge</title>
+
+    <!-- Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Custom CSS to override Bootstrap styles */
+        .form-container {
+            max-width: 500px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the form horizontally */
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <h1>Airtime Hub</h1>
+        <p>Top-up Airtel, Telkom, Safaricom, Faiba, and Equitel airtime via mpesa.</p>
+    </div>
+
+    <div class="container text-white">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <form class="form-container bg-primary p-3 m-3" action="http://localhost:5000/result" method="post">
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Recharge Airtime</legend>
+                        <!-- <h2 class="text-center">Recharge Airtime</h2> -->
+                        <div class="mb-3">
+                            <label class="input-label form-label" for="phone2Recharge">Mobile number to receive Airtime:</label>
+                            <input class="form-control" type="tel" name="phone2Recharge" id="phone2Recharge" placeholder="eg. 0718XXX935" pattern="[0][0-9]{9}" required> 
+                        </div>
+                        <div class="mb-3">
+                            <label class="input-label form-label" for="airtimeamount">Enter Airtime Amount:</label>
+                            <input class="form-control" type="number" name="airtimeamount" id="airtimeamount"  placeholder="e.g 100" autocomplete="off" min="5" max="10000" required> 
+                        </div>
+                        <div class="mb-3">
+                            <label class="input-label form-label" for="phone2Pay">Mpesa Mobile number paying:</label> <br>
+                            <input class="form-control" type="tel" name="phone2Pay" id="phone2Pay" placeholder="eg. 0718XXX935" pattern="[0][0-9]{9}" required> 
+                        </div>
+                        <div class="mb-3 ">
+                            <input class="btn btn-dark" type="submit" id="submit" name="submit" value="Buy Airtime">
+                        </div>
+                    </fieldset>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
